@@ -1,0 +1,35 @@
+# Information
+name: TeleportAssist
+main: com.deviseworks.tpa.App
+version: 1.0-SNAPSHOT
+api-version: 1.18
+prefix: TPA
+author: rokuosan
+
+# Commands
+commands:
+  tpa:
+    permission: tpa.accept
+    permission-message: You don't have permission.
+    description: Accept teleport request
+  tpr:
+    permission: tpa.request
+    permission-message: You don't have permission.
+    description: Send teleport request
+#  sr:
+#    description: Show Requests
+
+# Permission
+permissions:
+  tpa.*:
+    children:
+      tpa.bypass: true
+      tpa.request: true
+      tpa.accept: true
+    default: op
+  tpa.bypass.accept:
+    default: op
+  tpa.request:
+    default: true
+  tpa.accept:
+    default: true
