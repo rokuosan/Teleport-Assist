@@ -8,7 +8,7 @@ class RequestSchedule( private val status: PlayerStatus ): BukkitRunnable() {
     private var elapsedTime = 0
 
     override fun run() {
-        if(elapsedTime >= 10){
+        if(elapsedTime >= 20){
             requests.remove(status)
 
             // 終わり
