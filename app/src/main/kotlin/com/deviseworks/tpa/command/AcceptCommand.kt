@@ -59,6 +59,7 @@ class AcceptCommand: CommandExecutor {
                     requests.remove(status)
                 }else{
                     sender.sendMessage(Messages.NOT_FOUND_REQUEST)
+                    sender.sendMessage(Messages.HINT_RESEND_REQUEST)
                 }
 
             }else{

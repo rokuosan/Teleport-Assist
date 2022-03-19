@@ -80,6 +80,7 @@ class RequestCommand(private val plugin: App): CommandExecutor {
                         executor.sendMessage(Messages.SUCCESSFULLY_TELEPORT)
                     }else{
                         destPlayer.sendMessage(Messages.requestNotification(executor.name))
+                        destPlayer.sendMessage(Messages.HINT_HOW_TO_ACCEPT)
                         sender.sendMessage(Messages.sentNotification(destPlayer.name))
 
                         val status = PlayerStatus(executor.uniqueId, true, destPlayer.uniqueId, false)
