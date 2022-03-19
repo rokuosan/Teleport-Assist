@@ -43,4 +43,5 @@ object Messages {
     fun requestNotification(name: String) = "$HINT ${name}からテレポートリクエストを受け取りました。"
     fun sentNotification(name: String) = "$HINT ${name}にテレポートリクエストを送信しました。"
     val HINT_HOW_TO_ACCEPT = "$HINT 承諾するには${ChatColor.YELLOW}${ChatColor.UNDERLINE}/tpa <名前> ${ChatColor.RESET}${ChatColor.ITALIC}を実行してください。"
+    val HINT_RESEND_REQUEST = "$HINT 期限切れの場合はもう一度リクエストを受け取る必要があります"
 }
