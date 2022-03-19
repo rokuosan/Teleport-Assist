@@ -32,6 +32,7 @@ object Messages {
     // 警告メッセージ
     val TOO_MANY_ARGUMENTS = "$WARN 引数が多すぎます。"
     val REQUIRE_TARGET_PLAYER = "$WARN 対象のプレイヤーを指定してください。"
+    val REQUEST_TIMEOUT = "$WARN リクエストの期限が切れました"
 
 
     // 成功メッセージ
