@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.deviseworks"
-version = "1.0-SNAPSHOT"
+version = "1.1.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 val minecraftVersion = "1.18.1"
@@ -54,5 +54,15 @@ application {
 tasks.withType<KotlinCompile>{
     kotlinOptions{
         jvmTarget = "17"
+    }
+}
+
+tasks.withType<ProcessResources>{
+    val props = mapOf("version" to version)
+
+    inputs.properties(props)
+    filteringCharset = "UTF-8"
+    filesMatching("plugin.yml"){
+        expand(props)
     }
 }
