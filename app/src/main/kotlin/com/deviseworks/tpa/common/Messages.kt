@@ -16,7 +16,7 @@ object Messages {
     private val ERROR = "${ChatColor.RED}${ChatColor.ITALIC}[!!]"
     private val WARN = "${ChatColor.ITALIC}[!]"
     private val HINT = "${ChatColor.ITALIC}[?]"
-    private val SUCCESS = "${ChatColor.GREEN}{ChatColor.ITALIC}[=]"
+    private val SUCCESS = "${ChatColor.GREEN}${ChatColor.ITALIC}[=]"
 
 
     // エラーメッセージ

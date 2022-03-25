@@ -11,10 +11,13 @@ class RequestSchedule( private val status: PlayerStatus ): BukkitRunnable() {
 
     override fun run() {
         if(elapsedTime >= 20){
-            requests.remove(status)
 
-            Bukkit.getServer().getPlayer(status.uuid)?.sendMessage(Messages.REQUEST_TIMEOUT)
-            Bukkit.getServer().getPlayer(status.targetUUID)?.sendMessage(Messages.REQUEST_TIMEOUT)
+            if(!status.accepted){
+                Bukkit.getServer().getPlayer(status.uuid)?.sendMessage(Messages.REQUEST_TIMEOUT)
+                Bukkit.getServer().getPlayer(status.targetUUID)?.sendMessage(Messages.REQUEST_TIMEOUT)
+            }
+
+            requests.remove(status)
 
             // 終わり
             cancel()
