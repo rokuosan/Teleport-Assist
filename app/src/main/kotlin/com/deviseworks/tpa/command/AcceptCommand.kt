@@ -56,7 +56,7 @@ class AcceptCommand: CommandExecutor {
                     target.teleport(executor.location)
                     sender.sendMessage(Messages.PERMIT_TELEPORT)
                     target.sendMessage(Messages.SUCCESSFULLY_TELEPORT)
-                    requests.remove(status)
+                    status.accepted = true
                 }else{
                     sender.sendMessage(Messages.NOT_FOUND_REQUEST)
                     sender.sendMessage(Messages.HINT_RESEND_REQUEST)
