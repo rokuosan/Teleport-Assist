@@ -24,6 +24,7 @@ class RequestSchedule( private val status: PlayerStatus ): BukkitRunnable() {
             return
         }else{
             if(status.accepted){
+                requests.remove(status)
                 cancel()
             }
 

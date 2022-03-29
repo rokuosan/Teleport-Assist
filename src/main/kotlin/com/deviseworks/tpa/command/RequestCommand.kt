@@ -62,7 +62,7 @@ class RequestCommand(private val plugin: App): CommandExecutor {
 
                     // すでに他人にリクエストを送っているか
                     for(r in requests){
-                        if(r.uuid==executor.uniqueId){
+                        if(r.uuid==executor.uniqueId && !r.accepted){
                             sender.sendMessage(Messages.REQUEST_HAS_ALREADY_SENT)
                             return true
                         }
