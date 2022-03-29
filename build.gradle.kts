@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.deviseworks"
-version = "1.1.1"
+version = "1.1.2"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 val minecraftVersion = "1.18.1"
@@ -35,7 +35,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // This dependency is used by the application.
-    implementation("com.google.guava:guava:30.1.1-jre")
+    implementation("com.google.guava:guava:31.1-jre")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
