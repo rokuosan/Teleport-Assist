@@ -4,6 +4,12 @@
 
 このプラグインはユーザ間のテレポート機能を提供します。
 
+## Supported Versions
+
+- 1.18.2
+- 1.18.1
+- 1.18
+
 ## Installation
 
 Releaseから最新のビルドをDLしてください。
