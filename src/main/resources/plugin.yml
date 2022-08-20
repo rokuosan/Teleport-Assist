@@ -18,6 +18,8 @@ commands:
     description: Send teleport request
 #  sr:
 #    description: Show Requests
+  g:
+    description: Open Sample Gui
 
 # Permission
 permissions:
