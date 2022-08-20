@@ -78,7 +78,6 @@ class RequestCommand(private val plugin: App): CommandExecutor {
 
             // GUI モード
             if(sender is Player){
-//                RequestGui(plugin).open(sender)
 
                 // Main frame
                 val gui = ChestGui(6, "REQUEST MENU")
