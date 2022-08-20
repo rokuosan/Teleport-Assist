@@ -44,6 +44,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     compileOnly("org.spigotmc:spigot-api:${minecraftVersion}-R0.1-SNAPSHOT")
+
+    implementation("com.github.stefvanschie.inventoryframework:IF:0.10.7")
 }
 
 application {
