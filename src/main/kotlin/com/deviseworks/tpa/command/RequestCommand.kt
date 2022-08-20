@@ -80,7 +80,7 @@ class RequestCommand(private val plugin: App): CommandExecutor {
             if(sender is Player){
 
                 // Main frame
-                val gui = ChestGui(6, "REQUEST MENU")
+                val gui = ChestGui(6, Messages.MENU_TELEPORT_REQUEST)
                 gui.setOnGlobalClick { e -> e.isCancelled = true }
 
                 // Navigation
@@ -111,7 +111,7 @@ class RequestCommand(private val plugin: App): CommandExecutor {
 
                         if(players.size <= index) break
 
-                        val head = CustomItem.create(Material.PLAYER_HEAD, players[index].name, 1, "Click to send teleport request.")
+                        val head = CustomItem.create(Material.PLAYER_HEAD, players[index].name, 1, Messages.ITEM_TELEPORT_DESCRIPTION)
                         val skullMeta = head.itemMeta as SkullMeta
                         skullMeta.ownerProfile = players[index].playerProfile
                         head.itemMeta = skullMeta
