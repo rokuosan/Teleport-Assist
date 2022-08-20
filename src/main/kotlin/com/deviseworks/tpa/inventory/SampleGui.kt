@@ -68,7 +68,6 @@ class ExampleGui : Listener {
     // Check for clicks on items
     @EventHandler(priority = EventPriority.LOWEST)
     fun onInventoryClick(e: InventoryClickEvent) {
-        e.whoClicked.sendMessage("Highest Event")
         val title = e.view.title
         if(title != INVENTORY_NAME) return
 
