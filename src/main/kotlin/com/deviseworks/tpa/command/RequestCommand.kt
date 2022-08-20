@@ -134,8 +134,10 @@ class RequestCommand(private val plugin: App): CommandExecutor {
                     val previous = CustomItem.create(Material.MUSIC_DISC_11, "前のページへ", 1)
 
                     if(pages > 1){
-                        footer.addItem(GuiItem(next), 7, 0)
-                        if(pageIndex > 1){
+                        if(pageIndex + 1 < pages){
+                            footer.addItem(GuiItem(next), 7, 0)
+                        }
+                        if(pageIndex > 0){
                             footer.addItem(GuiItem(previous), 1, 0)
                         }
                     }
