@@ -48,9 +48,11 @@ object Messages {
 
 
     // メニュー
-    val MENU_TELEPORT_REQUEST = "${ChatColor.UNDERLINE}テレポートリクエスト"
+    val MENU_TELEPORT_REQUEST = "${ChatColor.UNDERLINE}テレポート リクエスト"
+    val MENU_TELEPORT_ACCEPT = "${ChatColor.UNDERLINE}テレポート アクセプト"
 
 
     // メニューアイテム
-    val ITEM_TELEPORT_DESCRIPTION = "${ChatColor.GRAY}クリックしてテレポートリクエストを送信"
+    val ITEM_REQUEST_DESCRIPTION = "${ChatColor.GRAY}クリックしてテレポートリクエストを送信"
+    val ITEM_ACCEPT_DESCRIPTION = "${ChatColor.GRAY}クリックしてテレポートを許可"
 }

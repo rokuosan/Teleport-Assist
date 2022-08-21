@@ -112,7 +112,7 @@ class RequestCommand: CommandExecutor {
 
                         if(players.size <= index) break
 
-                        val head = CustomItem.create(Material.PLAYER_HEAD, players[index].name, 1, Messages.ITEM_TELEPORT_DESCRIPTION)
+                        val head = CustomItem.create(Material.PLAYER_HEAD, players[index].name, 1, Messages.ITEM_REQUEST_DESCRIPTION)
                         val skullMeta = head.itemMeta as SkullMeta
                         skullMeta.ownerProfile = players[index].playerProfile
                         head.itemMeta = skullMeta
