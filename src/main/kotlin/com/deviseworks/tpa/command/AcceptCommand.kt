@@ -62,10 +62,10 @@ class AcceptCommand: CommandExecutor {
                 isExistsRequest = true
             }
         }
-//        if(!isExistsRequest){
-//            player.sendMessage("Not found requests.")
-//            return
-//        }
+        if(!isExistsRequest){
+            player.sendMessage("Not found requests.")
+            return
+        }
 
         // Main Frame
         val gui = ChestGui(6, "ACCEPT MENU")
