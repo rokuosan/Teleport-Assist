@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.deviseworks"
-version = "1.1.2"
+version = "1.2.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 val minecraftVersion = "1.18.1"
@@ -44,6 +44,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     compileOnly("org.spigotmc:spigot-api:${minecraftVersion}-R0.1-SNAPSHOT")
+
+    implementation("com.github.stefvanschie.inventoryframework:IF:0.10.7")
 }
 
 application {

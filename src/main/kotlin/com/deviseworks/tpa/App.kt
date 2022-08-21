@@ -10,11 +10,13 @@ var requests = mutableListOf<PlayerStatus>()
 class App: JavaPlugin(){
 
     override fun onEnable() {
+        Store.plugin = this
 
         logger.info("Registering commands...")
-        getCommand("tpr")?.setExecutor(RequestCommand(this))
+        getCommand("tpr")?.setExecutor(RequestCommand())
         getCommand("tpa")?.setExecutor(AcceptCommand())
-//        getCommand("sr")?.setExecutor(ShowList())
+
+        logger.info("Registering events...")
 
         logger.info("TPA is ready!")
     }
