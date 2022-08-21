@@ -63,12 +63,12 @@ class AcceptCommand: CommandExecutor {
             }
         }
         if(!isExistsRequest){
-            player.sendMessage("Not found requests.")
+            player.sendMessage("リクエストがありません")
             return
         }
 
         // Main Frame
-        val gui = ChestGui(6, "ACCEPT MENU")
+        val gui = ChestGui(6, Messages.MENU_TELEPORT_ACCEPT)
         gui.setOnGlobalClick { e -> e.isCancelled = true }
 
         // Navbar
@@ -99,7 +99,7 @@ class AcceptCommand: CommandExecutor {
                     val name: String = Bukkit.getPlayer(p.uuid)?.name?:""
 
                    // Head
-                    val head = CustomItem.create(Material.PLAYER_HEAD, name, 1, "Click to accept")
+                    val head = CustomItem.create(Material.PLAYER_HEAD, name, 1, Messages.ITEM_ACCEPT_DESCRIPTION)
                     val skull = head.itemMeta as SkullMeta
                     skull.ownerProfile = Bukkit.getPlayer(p.uuid)?.playerProfile
                     head.itemMeta = skull
