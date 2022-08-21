@@ -96,9 +96,10 @@ class AcceptCommand: CommandExecutor {
 
                 if(index < players.size){
                     val p = players[index]
+                    val name: String = Bukkit.getPlayer(p.uuid)?.name?:""
 
                    // Head
-                    val head = CustomItem.create(Material.PLAYER_HEAD,p.uuid.toString(), 1, "Click to accept")
+                    val head = CustomItem.create(Material.PLAYER_HEAD, name, 1, "Click to accept")
                     val skull = head.itemMeta as SkullMeta
                     skull.ownerProfile = Bukkit.getPlayer(p.uuid)?.playerProfile
                     head.itemMeta = skull
