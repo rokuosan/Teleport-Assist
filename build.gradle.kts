@@ -13,7 +13,7 @@ plugins {
 }
 
 group = "com.deviseworks"
-version = "1.1.2"
+version = "1.2.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 val minecraftVersion = "1.18.1"
