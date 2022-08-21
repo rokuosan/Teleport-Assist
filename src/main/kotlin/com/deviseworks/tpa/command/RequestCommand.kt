@@ -1,6 +1,6 @@
 package com.deviseworks.tpa.command
 
-import com.deviseworks.tpa.App
+import com.deviseworks.tpa.Store
 import com.deviseworks.tpa.common.Messages
 import com.deviseworks.tpa.entity.PlayerStatus
 import com.deviseworks.tpa.requests
@@ -20,7 +20,8 @@ import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 import org.bukkit.inventory.meta.SkullMeta
 
-class RequestCommand(private val plugin: App): CommandExecutor {
+class RequestCommand: CommandExecutor {
+    private val plugin = Store.plugin
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         if(command.name.equals("tpr", true)){
@@ -198,7 +199,7 @@ class RequestCommand(private val plugin: App): CommandExecutor {
             val status = PlayerStatus(executor.uniqueId, true, target.uniqueId, false)
 
             requests.add(status)
-            RequestSchedule(status).runTaskTimer(plugin, 0L, 20L)
+            plugin?.let { RequestSchedule(status).runTaskTimer(it, 0L, 20L) }
         }
 
         return true

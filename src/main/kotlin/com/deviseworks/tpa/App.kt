@@ -13,7 +13,7 @@ class App: JavaPlugin(){
         Store.plugin = this
 
         logger.info("Registering commands...")
-        getCommand("tpr")?.setExecutor(RequestCommand(this))
+        getCommand("tpr")?.setExecutor(RequestCommand())
         getCommand("tpa")?.setExecutor(AcceptCommand())
 
         logger.info("Registering events...")
